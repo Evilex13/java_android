@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FifteenPuzzle</string>
+    <string name="time">Small Text</string>
+    <string name="move">Small Text</string>
+    <string name="btn_reset">Reset</string>
+    <string name="menu_theme">Theme</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_about">About</string>
+    <string name="menu_exit">Exit</string>
+    <string name="text_field">Large Text</string>
+    <string name="text_field2">Last Winner</string>
+    <string name="about_text">This is Fifteen.\n
+        App was created by Alex Tsoi \n
+        Nov.2015
+    </string>
+</resources>
