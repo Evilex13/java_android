@@ -2,6 +2,8 @@ package com.example.myapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -34,5 +36,22 @@ public class StartActivity extends Activity {
             c.setMobilePhone("+7(900)9092012");
             contacts.add(c);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.add:
+                break;
+            case R.id.delete:
+                break;
+        }
+        return super.onContextItemSelected(item);
     }
 }

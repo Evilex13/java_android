@@ -2,11 +2,13 @@ package com.example.myapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -76,6 +78,25 @@ public class AllContactsView extends BaseAdapter {
                 context.startActivity(intent);
             }
         });
+
+        ImageButton ibCall = (ImageButton) view.findViewById(R.id.imageButton_call2);
+        ibCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dialIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + c.getMobilePhone()));
+                context.startActivity(dialIntent);
+            }
+        });
+
+        ImageButton imEmail = (ImageButton) view.findViewById(R.id.imageButton_email2);
+        imEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + c.getEmail()));
+                context.startActivity(mailIntent);
+            }
+        });
+
 
         return view;
     }
